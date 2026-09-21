@@ -9,7 +9,7 @@ Use a root orchestrator and one implementation agent in Herdr. Invoking this ski
 
 ## Set up and assign
 
-- Read applicable repository instructions and inspect the working tree, branch, HEAD, and relevant PR/stack state. Preserve unrelated changes and capture the requested behavior and constraints.
+- Read applicable repository instructions and inspect the working tree, branch, HEAD, and relevant PR state. Preserve unrelated changes and capture the requested behavior and constraints.
 - If the task names an issue, read it and any existing implementation plan. Resolve
   its number and title from the issue; ask only if the named target is ambiguous.
   Without an issue, use the user's task description and any existing relevant plan.
@@ -19,8 +19,8 @@ Use a root orchestrator and one implementation agent in Herdr. Invoking this ski
   #48 "Connect Studio chat" becomes `issue-48-connect-studio-chat`.
   Place `<repo-name>-<branch>` in a permitted writable root, beside the repository
   when permitted. Honor user-specified locations and filesystem approval requirements.
-- Choose the base from the task, any issue/plan, and current PR stack: use the
-  intended parent branch for stacked work or the repository's default branch otherwise. Verify
+- Use the repository's default branch as the base unless the user or approved plan
+  specifies another base. Verify
   the base ref before running `git worktree add -b <branch> <worktree-path> <base>`.
   Keep the original checkout and its uncommitted changes intact.
 - Inspect `git worktree list` and existing branches/paths first. Reuse a matching
@@ -77,7 +77,7 @@ simplification pass is not required for every task; do not force cleanup edits.
 
 ## Finish
 
-For authorized draft PRs, inspect `gh stack` help and use the intended base; split large changes into small dependent PRs. Verify the PR URL, draft status, base, commit, and working-tree state. PR preparation alone does not authorize merging, deployment, or other external actions.
+For authorized draft PRs, use `gh pr create` with the verified base. Keep one PR per repository for the task. Verify the PR URL, draft status, base, commit, and working-tree state. PR preparation alone does not authorize merging, deployment, or other external actions.
 
 Resolve remaining work before handoff. Include a concise **Change | Related code** Markdown table linking meaningful behavior to verified file lines, followed by validation and material limitations or commit/PR status. Use absolute clickable file targets with repository-relative labels.
 
