@@ -5,7 +5,7 @@ description: Delegate implementation through Herdr. Use when the user explicitly
 
 # Orchestrate implementation
 
-Use a root orchestrator and one implementation agent in Herdr. Invoking this skill selects Herdr; honor an explicit user override. Use the configured model with medium effort unless the user requests otherwise.
+Use a root orchestrator and implementation agents in Herdr. Invoking this skill selects Herdr; honor an explicit user override. Use the configured model with suitable effort (low, medium, high, xhigh) base on the complexity of task unless the user requests otherwise.
 
 ## Set up and assign
 
@@ -86,3 +86,5 @@ Close and verify closure of panes created for this task before the final respons
 Report the task worktree path and branch at handoff. Keep the worktree available
 for user review; remove it only when cleanup is explicitly authorized, after
 verifying that no uncommitted or unpushed work would be lost.
+
+Summary what channges were made, what code was affected in each file exclude test files.

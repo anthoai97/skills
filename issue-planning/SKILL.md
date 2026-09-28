@@ -81,7 +81,7 @@ otherwise use `docs/plans/<issue-number>-<feature>.md`. Include:
   for the agreed outcome. For new files, explain why an existing file cannot
   reasonably own the work. Include relevant tests/configuration/docs; write
   `No new files planned` when applicable. Verify existing paths from the repository
-  and clearly mark any file choice that still depends on investigation.
+  and clearly mark any file choice that still depends on investigation. File change should exclude .test files.
 - Relevant contracts, data/state transitions, failure paths and compatibility or
   migration consequences when applicable.
 - Acceptance criteria and proportionate verification tied to those criteria.
