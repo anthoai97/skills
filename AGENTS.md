@@ -12,7 +12,6 @@
 - Do not over-engineering.
 - Aim for simple, elegant implementations.
 - Let agents interpret intent. Validate tool arguments and execution safety, not user wording. Avoid regex intent checks and redundant confirmations.
-- When the user requests code review, use `herdr` to run Claude's `/code-review` and report findings. Fix only when requested; repeat review when changes or unresolved findings warrant it.
 - Do not write tests for reversible, low-impact changes that mirror the implementation. If you do choose to verify your work with tests, make sure that the tests are meaningful and necessary to verify implementation.
 - Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.
 - Delegate concrete independent work when the benefit outweighs coordination overhead. Use collaboration tools unless the requested workflow specifies Herdr.
@@ -45,7 +44,6 @@ disagree before saying what you changed.
 - Never remove or downgrade code to fix type errors from outdated deps; upgrade the dep instead.
 - Ask before removing functionality or code that appears intentional unless that removal is already authorized by the current task.
 - Do not preserve backward compatibility unless the user asks for it.
-- Code refactor target for this scope only if user do not have any specific asking: livi-server, packages/decorator-agent, scripts
 
 ## User Override
 
