@@ -7,7 +7,6 @@
 
 ## Engineering principles
 
-- Exclude `livi-client` from current and future development. Do not plan edits or client-specific validation for it. Use `web-pipeline` for Studio frontend work.
 - Keep edits minimal. Delete obsolete code instead of layering compatibility paths.
 - Modify existing functions in place. Do not create a new version of, or rename, a function.
 - Do not over-engineering.
@@ -17,7 +16,6 @@
 - Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.
 - Delegate concrete independent work to built-in Claude Code subagents when the benefit outweighs coordination overhead.
 - DO NOT CHANGE ANY CONTRACT VERSION JUST REPLACE DIRECTLY
-- PR always target to `trunk` branch
 
 ## Conversational Style
 
@@ -47,7 +45,6 @@ disagree before saying what you changed.
 - Never remove or downgrade code to fix type errors from outdated deps; upgrade the dep instead.
 - Ask before removing functionality or code that appears intentional unless that removal is already authorized by the current task.
 - Do not preserve backward compatibility unless the user asks for it.
-- Code refactor target for this scope only if user do not have any specific asking: livi-server, packages/decorator-agent, scripts
 
 ## User Override
 

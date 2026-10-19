@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orchestrate Implementation"
+  short_description: "Run implementation agents with clear ownership"
+  default_prompt: "Use $orchestrate-implementation to create a task worktree, delegate implementation, simplify when requested or warranted, and verify the result before any push or PR publication."
