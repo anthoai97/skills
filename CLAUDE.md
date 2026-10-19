@@ -17,6 +17,20 @@
 - Delegate concrete independent work to built-in Claude Code subagents when the benefit outweighs coordination overhead.
 - DO NOT CHANGE ANY CONTRACT VERSION JUST REPLACE DIRECTLY
 
+## Principles
+
+Adapted from the pstack principle skills in [cursor/plugins](https://github.com/cursor/plugins) (MIT).
+
+- **Explain the number.** Before you trust or report a measured result, such as a speedup, a regression, or an eval score, state the run count, the spread, and what limits it. Rule out other explanations: errors, skipped or cached work, code that never ran, noise, or a changed setup. One run of a nondeterministic system, such as an LLM, proves little.
+- **Prove it works.** Check the real result: run the feature, read the actual value, inspect the output. Passing tests, mocks, "it compiles", and agent self-reports are stand-ins. Prefer one cheap real run or a rerunnable script over a one-time look.
+- **Attack the premise.** When two fixes that share one assumption fail the same check, write the assumption down and test it before you try a third fix.
+- **Encode lessons in structure.** When a rule has to be repeated, enforce it with a lint, hook, test fixture, or script instead of more text. Keep text only for rules that need judgment, and add an example of the failure.
+- **Boundary discipline.** Validate and parse data once where it enters the system: requests, config, CLI arguments, external APIs, LLM output, database rows. Inside, trust the types and keep business logic in plain functions.
+- **Type system discipline.** Give values that mean different things their own types, even when both are strings, for example two kinds of ID. Derive types from the schema that owns the shape instead of writing a parallel one.
+- **Model the domain.** Put each rule in one data structure, such as a table, map, state machine, or discriminated union, instead of if branches spread across files. Do not force an abstraction that removes no branches or duplicated rules.
+- **Test behavior, not implementation.** A test must fail when the behavior breaks and keep passing when only the internals change. Asserting a constant's value tests nothing. Drive the code through its public interface with a concrete input, and derive the expected value from the requirement.
+- **Build the lever.** For non-trivial edits, comparisons, or checks, write a small rerunnable script instead of working by hand. Keep it a script, not a framework.
+
 ## Conversational Style
 
 - Keep answers short and concise
