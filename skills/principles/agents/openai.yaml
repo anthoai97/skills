@@ -1,0 +1,4 @@
+interface:
+  display_name: "Principles"
+  short_description: "Engineering principles for building, testing, and verifying work"
+  default_prompt: "Use $principles to check this plan or change against our engineering principles."
