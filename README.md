@@ -21,6 +21,7 @@ Skills for Claude Code and Codex. Each skill has one copy that works in both age
 | [issue-investigation](skills/issue-investigation/SKILL.md) | Investigate a GitHub issue and report its root cause before implementation. |
 | [issue-planning](skills/issue-planning/SKILL.md) | Clarify an issue's requirements and write a plan before implementation. |
 | [orchestrate-implementation](skills/orchestrate-implementation/SKILL.md) | Delegate implementation to Claude Code subagents or Herdr agents in Codex. |
+| [principles](skills/principles/SKILL.md) | Engineering principles for building, testing, debugging, and verifying work. |
 | [technical-writing](skills/technical-writing/SKILL.md) | Write and review technical documentation. |
 | [typescript-best-practices](skills/typescript-best-practices/SKILL.md) | Apply TypeScript practices when editing or reviewing code. |
 | [unslop](skills/unslop/SKILL.md) | Remove AI writing patterns from prose. |
