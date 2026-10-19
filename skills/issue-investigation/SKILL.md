@@ -36,6 +36,10 @@ another confirmation step. Issue updates do not authorize implementation.
   secrets. Keep temporary scripts and outputs outside production source. Label
   fixtures and simulations explicitly; do not change live rooms or catalog data
   to investigate.
+- Trace the symptom back to the first place the system went wrong. If the state
+  that triggered it should never exist, a guard where it broke hides the bug; find
+  what produced the state. Look for the same fault elsewhere and report every
+  instance.
 - For latency, separate model, context, validation, rendering, and presentation
   time. Inspect queues and locks before proposing parallel work. Combined elapsed
   time does not establish which stage is slow.

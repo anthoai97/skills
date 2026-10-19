@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Cleanup"
+  short_description: "Audit and prune stale git worktrees safely"
+  default_prompt: "Use $worktree-cleanup to audit this repository's worktrees, confirm which are in use, and prune the safe ones."
