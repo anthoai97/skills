@@ -8,6 +8,7 @@ Skills for Claude Code and Codex. Each skill has one copy that works in both age
 | --- | --- |
 | [`skills/`](skills/) | Skills, with `SKILL.md` instructions and optional `agents/openai.yaml` (Codex metadata), reference files, or scripts. |
 | [`agents/`](agents/) | Claude Code implementation subagents: `impl-low`, `impl-medium`, `impl-high`, and `impl-xhigh`. |
+| [`terminal/`](terminal/) | Backup of my zsh config, with setup steps for a new Mac. |
 | [`install.sh`](install.sh) | Installs the skills, agents, and starter rules. |
 | [`AGENTS.md`](AGENTS.md) | Rules for Codex, also the starter rules for new repos. |
 | [`CLAUDE.md`](CLAUDE.md) | Rules for Claude Code, also the starter rules for new repos. |

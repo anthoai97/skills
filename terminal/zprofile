@@ -1,0 +1,6 @@
+# Set PATH for user programs
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
+[[ -f ~/.zshenv ]] && source ~/.zshenv
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
